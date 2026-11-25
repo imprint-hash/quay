@@ -14,6 +14,7 @@ Frontier models can't answer "where is the HULDA MAERSK right now?": it changes 
 | Test | Result |
 |---|---|
 | [Truth test](eval/truth-digitraffic.md) vs Finland's official AIS feed (60 random ships) | **23 of 23 answers heard in the last hour were correct, median 1 m apart.** 0 made-up positions. Ships out of receiver range: honestly `vessel_not_seen` |
+| **Telegraph's own scoring** ([anjoman.ai explorer](https://anjoman.ai/api/explorer/scores?miner=quay-ais&limit=20)) | **LIVE_PORT_CONGESTION: rank #1 in every epoch from 45 to 53, scores 0.97–0.99**; every spot check passed. VESSEL_TELEMETRY: the graded asks so far name ships far out at sea (EVER GIVEN, MSC GULSUN); no vessel miner scored above 0 on them |
 | [Head to head](eval/head-to-head.md): every VESSEL miner, same ships, same minute | Quay correct 3/3. One rival swaps lat/lon on every answer, one returns `null` positions, and every rival that was right only relays the Finnish feed |
 | Paid asks on the Telegraph devnode | e.g. HULDA MAERSK, receipt `0x87705b7fdcec3c428434b30938fbc7fd100b3eefc40f703ee72db2372da336e5` (epoch 45); MMSI 219278000, receipt `0x86c1e5a8680e3401a2ac33f2af5865bba15e8a38a5da1a0aa9e190744fb05041` |
 | Traffic | 186 calls in the first 2 days, 95 of them routed by the Telegraph network at all hours |
@@ -46,7 +47,7 @@ POST https://devnode.telegraphprotocol.com/engine/v1/ask/8818818
 }
 ```
 
-`status` is `live` (heard in the last hour), `recent` (1–6 h: a moving ship may have moved on) or `stale` (over 6 h). Not heard in 72 h: HTTP 404 `vessel_not_seen`.
+`status` is `live` (heard in the last hour), `recent` (1–6 h: a moving ship may have moved on) or `stale` (over 6 h). Not heard in 14 days: `"status": "not_seen"` with all position fields `null` (never a guessed position).
 
 ### A real port answer
 
@@ -79,7 +80,7 @@ One Node.js process (`index.js`, ~260 lines):
 
 ## Limitations (also in [`miner.yaml`](miner.yaml))
 
-- **Terrestrial coverage:** ships far offshore, or near coasts without receivers, go unheard. Quay says `vessel_not_seen`.
+- **Terrestrial coverage:** ships far offshore, or near coasts without receivers, go unheard. Quay answers `"status": "not_seen"` with null position fields.
 - **Self-reported data:** destination and ETA are typed in by the ship's crew; they are passed through and labelled as such.
 - **Wait hours** need continuous observation; after a restart they are capped by the uptime, and the answer says so in `caveat`.
 

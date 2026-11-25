@@ -14,7 +14,7 @@ const LISTEN_PORT = Number(process.env.PORT || 8080);
 const SNAPSHOT = path.join(__dirname, "state.json");
 const STALE_HOURS = 6;          // older than this: still answered, but marked stale
 const LIVE_HOURS = 1;           // heard within the hour: live; 1-6 h: recent (a moving ship may have moved on)
-const FORGET_HOURS = 72;        // older than this: dropped from memory
+const FORGET_HOURS = 336;       // 14 days: older than this is dropped from memory (last-known positions are still useful, labelled stale)
 const STARTED = Date.now();
 
 // ---------- state ----------
@@ -149,9 +149,11 @@ function resolveVessel(q) {
 
 function vesselAnswer(q) {
   const hit = resolveVessel(q);
-  if (!hit) return [404, { error: "vessel_not_seen", vessel: q, summary: `No AIS report heard for "${q}" in the last ${FORGET_HOURS} h. Coverage is terrestrial: ships far offshore can go unheard. Try the 9-digit MMSI.` }];
+  // Not heard: a complete, honest answer (all position fields null, status "not_seen"), not an error.
+  if (!hit) return [200, { vessel: q, speed_knots: null, latitude: null, longitude: null, course_deg: null, observed_at: null, status: "not_seen",
+    summary: `No AIS report heard for "${q}" in the last ${FORGET_HOURS / 24} days. Coverage is terrestrial: ships far offshore can go unheard. Quay does not guess a position.` }];
   const r = ships.get(hit.mmsi);
-  if (r.posAt == null) return [404, { error: "no_position_yet", vessel: q, mmsi: r.mmsi, name: r.name || null, summary: "Ship identified from static data, but no position report heard yet." }];
+  if (r.posAt == null) return [200, { vessel: q, speed_knots: null, latitude: null, longitude: null, course_deg: null, observed_at: null, status: "not_seen", mmsi: r.mmsi, imo: r.imo || null, name: r.name || null, summary: "Ship identified from its static report, but no position heard yet." }];
   const age = hoursAgo(r.posAt);
   return [200, {
     vessel: q,
@@ -162,6 +164,7 @@ function vesselAnswer(q) {
     observed_at: iso(r.posAt),
     status: age > STALE_HOURS ? "stale" : age > LIVE_HOURS ? "recent" : "live",
     age_minutes: Math.round(age * 60),
+    last_heard: age > STALE_HOURS ? `${age >= 48 ? Math.round(age / 24) + " days" : Math.round(age) + " h"} ago` : null,
     mmsi: r.mmsi, imo: r.imo || null, name: r.name || null, callsign: r.callsign || null,
     heading_deg: r.heading ?? null,
     nav_status: navText(r.nav),

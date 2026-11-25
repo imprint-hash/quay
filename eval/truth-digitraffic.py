@@ -39,7 +39,7 @@ for f in sample:
 ans = [r for r in rows if "km_apart" in r]
 close = [r for r in ans if r["km_apart"] <= 1 + r["minutes_between"] * (r["truth"]["sog"] * 1.852 / 60)]
 summary = {"at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()), "truth_source": "Digitraffic AIS (Fintraffic) /api/ais/v1/locations", "asked": len(rows), "answered": len(ans),
-           "not_seen": sum(r["quay_status"] == 404 for r in rows), "within_expected_distance": len(close),
+           "not_seen": sum(r["quay_status"] == 404 or "km_apart" not in r for r in rows), "within_expected_distance": len(close),
            "median_km_apart": sorted(r["km_apart"] for r in ans)[len(ans) // 2] if ans else None,
            "median_minutes_between_fixes": sorted(r["minutes_between"] for r in ans)[len(ans) // 2] if ans else None,
            "name_match": sum(r["name_match"] for r in ans), "wrong_answers": len(ans) - len(close)}
