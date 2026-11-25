@@ -227,6 +227,32 @@ function portAnswer(q) {
   }];
 }
 
+// Ships inbound to a port right now: cargo ships and tankers heard in the last 30 min, outside the
+// port area but within 4x its radius, moving at 3+ kn with a course pointing at the port.
+// Not a Telegraph intent: a helper for apps (Northstar uses it to pick live demo voyages).
+function bearing(a, b, c, d) {
+  const p = Math.PI / 180, y = Math.sin((d - b) * p) * Math.cos(c * p);
+  const x = Math.cos(a * p) * Math.sin(c * p) - Math.sin(a * p) * Math.cos(c * p) * Math.cos((d - b) * p);
+  return (Math.atan2(y, x) / p + 360) % 360;
+}
+function approachingAnswer(q, limit = 10) {
+  const p = findPort(q);
+  if (!p) return [404, { error: "port_not_covered", port: q }];
+  const fresh = Date.now() - 30 * 60e3, out = [];
+  for (const r of ships.values()) {
+    if (r.lat == null || (r.posAt || 0) < fresh || !(r.shipType >= 70 && r.shipType <= 89) || (r.sog ?? 0) < 3 || r.cog == null) continue;
+    const d = km(r.lat, r.lon, p.lat, p.lon);
+    if (d <= p.radiusKm || d > p.radiusKm * 4) continue;
+    const diff = Math.abs(((bearing(r.lat, r.lon, p.lat, p.lon) - r.cog) + 540) % 360 - 180);
+    if (diff > 35) continue;
+    const toEdge = d - p.radiusKm;
+    out.push({ name: r.name || null, mmsi: r.mmsi, imo: r.imo || null, distance_km: Math.round(d), speed_knots: r.sog, destination: r.destination || null,
+      hours_to_port_area: Math.round((toEdge / (r.sog * 1.852)) * 10) / 10, heard_minutes_ago: Math.round((Date.now() - r.posAt) / 60000) });
+  }
+  out.sort((a, b) => a.hours_to_port_area - b.hours_to_port_area);
+  return [200, { port: p.names[0], unlocode: p.code, inbound: out.filter((x) => x.name).slice(0, limit), as_of: new Date().toISOString() }];
+}
+
 // ---------- http ----------
 function send(res, code, body, type = "application/json") {
   res.writeHead(code, { "Content-Type": type, "Cache-Control": "no-store", "Access-Control-Allow-Origin": "*" });
@@ -249,6 +275,7 @@ http.createServer((req, res) => {
       if (!q) return send(res, 400, { error: "invalid_request", summary: "port is required (name or UN/LOCODE)" });
       const [c, b] = portAnswer(q); return send(res, c, b);
     }
+    if (u.pathname === "/approaching") { const [c, b] = approachingAnswer(u.searchParams.get("port"), Number(u.searchParams.get("limit") || 10)); return send(res, c, b); }
     if (u.pathname === "/ports") return send(res, 200, PORTS.map((p) => ({ port: p.names[0], unlocode: p.code })));
     if (u.pathname === "/miner.yaml") return send(res, 200, fs.readFileSync(path.join(__dirname, "miner.yaml"), "utf8"), "text/yaml");
     send(res, 404, { error: "not_found" });
