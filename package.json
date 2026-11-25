@@ -1,0 +1,9 @@
+{
+  "name": "quay",
+  "version": "1.0.0",
+  "description": "Telegraph miner: live vessel positions and port congestion from real-time AIS",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": { "start": "node index.js", "eval": "python3 eval/truth-digitraffic.py 60" },
+  "dependencies": { "ws": "8.18.3" }
+}

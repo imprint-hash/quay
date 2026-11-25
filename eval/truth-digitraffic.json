@@ -1,0 +1,1243 @@
+{
+ "summary": {
+  "at": "2026-11-25T09:07:21Z",
+  "truth_source": "Digitraffic AIS (Fintraffic) /api/ais/v1/locations",
+  "asked": 60,
+  "answered": 39,
+  "not_seen": 21,
+  "within_expected_distance": 32,
+  "median_km_apart": 0.006,
+  "median_minutes_between_fixes": 21.0,
+  "name_match": 39,
+  "wrong_answers": 7
+ },
+ "rows": [
+  {
+   "mmsi": 230035440,
+   "name": "PILOT L239",
+   "ship_type": 50,
+   "truth": {
+    "lat": 63.838397,
+    "lon": 23.032585,
+    "sog": 0.1,
+    "at": 1795597564163
+   },
+   "quay_status": 200,
+   "quay": {
+    "latitude": 63.83839666666667,
+    "longitude": 23.03259166666667,
+    "speed_knots": 0.1,
+    "observed_at": "2026-11-25T09:01:44.215Z",
+    "status": "live",
+    "name": "PILOT L239"
+   },
+   "km_apart": 0.0,
+   "quay_age_min": 5.1,
+   "minutes_between": 4.3,
+   "sog_diff": 0.0,
+   "name_match": true
+  },
+  {
+   "mmsi": 256708000,
+   "name": "CMA CGM MERMAID",
+   "ship_type": 70,
+   "truth": {
+    "lat": 60.212002,
+    "lon": 25.193107,
+    "sog": 0.0,
+    "at": 1795597396911
+   },
+   "quay_status": 200,
+   "quay": {
+    "latitude": 60.212003333333335,
+    "longitude": 25.1931,
+    "speed_knots": 0,
+    "observed_at": "2026-11-25T09:06:16.252Z",
+    "status": "live",
+    "name": "CMA CGM MERMAID"
+   },
+   "km_apart": 0.0,
+   "quay_age_min": 0.5,
+   "minutes_between": 3.0,
+   "sog_diff": 0.0,
+   "name_match": true
+  },
+  {
+   "mmsi": 230992670,
+   "name": "ALFAGELN",
+   "ship_type": 60,
+   "truth": {
+    "lat": 60.224065,
+    "lon": 20.41429,
+    "sog": 0.0,
+    "at": 1795597564034
+   },
+   "quay_status": 404
+  },
+  {
+   "mmsi": 230341000,
+   "name": "FJARDVAGEN",
+   "ship_type": 70,
+   "truth": {
+    "lat": 60.102927,
+    "lon": 19.922982,
+    "sog": 0.0,
+    "at": 1795597548419
+   },
+   "quay_status": 404
+  },
+  {
+   "mmsi": 255915634,
+   "name": "LOLLAND",
+   "ship_type": 70,
+   "truth": {
+    "lat": 59.44895,
+    "lon": 20.103085,
+    "sog": 9.5,
+    "at": 1795597522419
+   },
+   "quay_status": 200,
+   "quay": {
+    "latitude": 58.07832166666667,
+    "longitude": 18.47657,
+    "speed_knots": 9.1,
+    "observed_at": "2026-11-24T22:38:03.323Z",
+    "status": "stale",
+    "name": "LOLLAND"
+   },
+   "km_apart": 178.941,
+   "quay_age_min": 628.8,
+   "minutes_between": 627.3,
+   "sog_diff": 0.4,
+   "name_match": true
+  },
+  {
+   "mmsi": 230098780,
+   "name": "VALVE 3",
+   "ship_type": 70,
+   "truth": {
+    "lat": 63.081093,
+    "lon": 21.572155,
+    "sog": 0.0,
+    "at": 1795597543478
+   },
+   "quay_status": 404
+  },
+  {
+   "mmsi": 352003390,
+   "name": "SINO PROSPERITY",
+   "ship_type": 80,
+   "truth": {
+    "lat": 59.85306,
+    "lon": 26.02188,
+    "sog": 0.5,
+    "at": 1795597472337
+   },
+   "quay_status": 200,
+   "quay": {
+    "latitude": 59.85265833333334,
+    "longitude": 26.02361,
+    "speed_knots": 0.6,
+    "observed_at": "2026-11-25T08:31:34.778Z",
+    "status": "live",
+    "name": "SINO PROSPERITY"
+   },
+   "km_apart": 0.106,
+   "quay_age_min": 35.2,
+   "minutes_between": 33.0,
+   "sog_diff": 0.1,
+   "name_match": true
+  },
+  {
+   "mmsi": 230185590,
+   "name": "NORDIC HERO",
+   "ship_type": 33,
+   "truth": {
+    "lat": 60.406823,
+    "lon": 26.251788,
+    "sog": 0.0,
+    "at": 1795597561149
+   },
+   "quay_status": 404
+  },
+  {
+   "mmsi": 374357000,
+   "name": "ARINA",
+   "ship_type": 70,
+   "truth": {
+    "lat": 59.59083,
+    "lon": 25.024973,
+    "sog": 0.3,
+    "at": 1795597458731
+   },
+   "quay_status": 200,
+   "quay": {
+    "latitude": 59.590763333333335,
+    "longitude": 25.025013333333334,
+    "speed_knots": 1.2,
+    "observed_at": "2026-11-24T03:09:51.103Z",
+    "status": "stale",
+    "name": "ARINA"
+   },
+   "km_apart": 0.008,
+   "quay_age_min": 1797.0,
+   "minutes_between": 1794.5,
+   "sog_diff": 0.9,
+   "name_match": true
+  },
+  {
+   "mmsi": 265022370,
+   "name": "RESCUE SUNNANO",
+   "ship_type": 51,
+   "truth": {
+    "lat": 60.339652,
+    "lon": 18.4426,
+    "sog": 0.1,
+    "at": 1795597562059
+   },
+   "quay_status": 404
+  },
+  {
+   "mmsi": 230938590,
+   "name": "UKKOPEKKA",
+   "ship_type": 60,
+   "truth": {
+    "lat": 60.444123,
+    "lon": 22.253147,
+    "sog": 0.0,
+    "at": 1795597560180
+   },
+   "quay_status": 200,
+   "quay": {
+    "latitude": 60.444098333333336,
+    "longitude": 22.253148333333336,
+    "speed_knots": 0.1,
+    "observed_at": "2026-11-25T09:05:21.007Z",
+    "status": "live",
+    "name": "UKKOPEKKA"
+   },
+   "km_apart": 0.003,
+   "quay_age_min": 1.5,
+   "minutes_between": 0.7,
+   "sog_diff": 0.1,
+   "name_match": true
+  },
+  {
+   "mmsi": 230938360,
+   "name": "HEINAVESI",
+   "ship_type": 60,
+   "truth": {
+    "lat": 61.876813,
+    "lon": 28.838215,
+    "sog": 0.0,
+    "at": 1795597558201
+   },
+   "quay_status": 404
+  },
+  {
+   "mmsi": 212123000,
+   "name": "STOC MARCIA",
+   "ship_type": 80,
+   "truth": {
+    "lat": 64.657537,
+    "lon": 24.412552,
+    "sog": 0.0,
+    "at": 1795597525674
+   },
+   "quay_status": 200,
+   "quay": {
+    "latitude": 65.18454333333334,
+    "longitude": 21.595183333333335,
+    "speed_knots": 11.8,
+    "observed_at": "2026-11-24T07:27:11.134Z",
+    "status": "stale",
+    "name": "STOC MARCIA"
+   },
+   "km_apart": 145.127,
+   "quay_age_min": 1539.6,
+   "minutes_between": 1538.2,
+   "sog_diff": 11.8,
+   "name_match": true
+  },
+  {
+   "mmsi": 230061040,
+   "name": "SUURSAARI",
+   "ship_type": 33,
+   "truth": {
+    "lat": 60.169135,
+    "lon": 25.00938,
+    "sog": 0.0,
+    "at": 1795597445485
+   },
+   "quay_status": 200,
+   "quay": {
+    "latitude": 60.169131666666665,
+    "longitude": 25.009386666666668,
+    "speed_knots": 0,
+    "observed_at": "2026-11-25T09:01:05.669Z",
+    "status": "live",
+    "name": "SUURSAARI"
+   },
+   "km_apart": 0.001,
+   "quay_age_min": 5.7,
+   "minutes_between": 3.0,
+   "sog_diff": 0.0,
+   "name_match": true
+  },
+  {
+   "mmsi": 273299870,
+   "name": "BOGATYR",
+   "ship_type": 31,
+   "truth": {
+    "lat": 60.621052,
+    "lon": 28.557847,
+    "sog": 0.0,
+    "at": 1795597548079
+   },
+   "quay_status": 404
+  },
+  {
+   "mmsi": 305305000,
+   "name": "ONEGO ELBE",
+   "ship_type": 70,
+   "truth": {
+    "lat": 62.552322,
+    "lon": 19.935552,
+    "sog": 12.6,
+    "at": 1795597557017
+   },
+   "quay_status": 200,
+   "quay": {
+    "latitude": 63.437461666666664,
+    "longitude": 20.590191666666666,
+    "speed_knots": 12.6,
+    "observed_at": "2026-11-25T04:31:38.277Z",
+    "status": "live",
+    "name": "ONEGO ELBE"
+   },
+   "km_apart": 103.823,
+   "quay_age_min": 275.2,
+   "minutes_between": 274.3,
+   "sog_diff": 0.0,
+   "name_match": true
+  },
+  {
+   "mmsi": 230055040,
+   "name": "MIINA",
+   "ship_type": 54,
+   "truth": {
+    "lat": 60.148943,
+    "lon": 25.035798,
+    "sog": 0.0,
+    "at": 1795597554678
+   },
+   "quay_status": 200,
+   "quay": {
+    "latitude": 60.148943333333335,
+    "longitude": 25.035798333333332,
+    "speed_knots": 0,
+    "observed_at": "2026-11-25T09:05:54.676Z",
+    "status": "live",
+    "name": "MIINA"
+   },
+   "km_apart": 0.0,
+   "quay_age_min": 0.9,
+   "minutes_between": 0.0,
+   "sog_diff": 0.0,
+   "name_match": true
+  },
+  {
+   "mmsi": 230939250,
+   "name": "JENNY",
+   "ship_type": 0,
+   "truth": {
+    "lat": 63.85793,
+    "lon": 23.115427,
+    "sog": 0.0,
+    "at": 1795597432184
+   },
+   "quay_status": 200,
+   "quay": {
+    "latitude": 63.85793,
+    "longitude": 23.115426666666668,
+    "speed_knots": 0,
+    "observed_at": "2026-11-25T09:03:52.228Z",
+    "status": "live",
+    "name": "JENNY"
+   },
+   "km_apart": 0.0,
+   "quay_age_min": 2.9,
+   "minutes_between": 0.0,
+   "sog_diff": 0.0,
+   "name_match": true
+  },
+  {
+   "mmsi": 249588000,
+   "name": "PUNTA",
+   "ship_type": 70,
+   "truth": {
+    "lat": 59.49266,
+    "lon": 24.960095,
+    "sog": 0.0,
+    "at": 1795597484529
+   },
+   "quay_status": 200,
+   "quay": {
+    "latitude": 59.49264333333333,
+    "longitude": 24.960131666666665,
+    "speed_knots": 0,
+    "observed_at": "2026-11-25T08:28:45.696Z",
+    "status": "live",
+    "name": "PUNTA"
+   },
+   "km_apart": 0.003,
+   "quay_age_min": 38.1,
+   "minutes_between": 36.0,
+   "sog_diff": 0.0,
+   "name_match": true
+  },
+  {
+   "mmsi": 667002072,
+   "name": "OSANA",
+   "ship_type": 80,
+   "truth": {
+    "lat": 60.022345,
+    "lon": 28.491997,
+    "sog": 0.0,
+    "at": 1795597398886
+   },
+   "quay_status": 404
+  },
+  {
+   "mmsi": 230939360,
+   "name": "KIVIMO",
+   "ship_type": 60,
+   "truth": {
+    "lat": 60.43926,
+    "lon": 21.396782,
+    "sog": 0.0,
+    "at": 1795597558644
+   },
+   "quay_status": 200,
+   "quay": {
+    "latitude": 60.43931333333333,
+    "longitude": 21.396785,
+    "speed_knots": 0,
+    "observed_at": "2026-11-25T06:12:58.623Z",
+    "status": "live",
+    "name": "KIVIMO"
+   },
+   "km_apart": 0.006,
+   "quay_age_min": 173.8,
+   "minutes_between": 173.0,
+   "sog_diff": 0.0,
+   "name_match": true
+  },
+  {
+   "mmsi": 230938660,
+   "name": "LEONIE",
+   "ship_type": 70,
+   "truth": {
+    "lat": 60.314603,
+    "lon": 23.034193,
+    "sog": 0.0,
+    "at": 1795597564959
+   },
+   "quay_status": 404
+  },
+  {
+   "mmsi": 563026400,
+   "name": "NOVA BREEZE",
+   "ship_type": 80,
+   "truth": {
+    "lat": 60.794375,
+    "lon": 21.3391,
+    "sog": 0.0,
+    "at": 1795597429232
+   },
+   "quay_status": 404
+  },
+  {
+   "mmsi": 244978000,
+   "name": "GREETJE",
+   "ship_type": 70,
+   "truth": {
+    "lat": 61.124288,
+    "lon": 21.454395,
+    "sog": 0.0,
+    "at": 1795597436385
+   },
+   "quay_status": 200,
+   "quay": {
+    "latitude": 61.12428666666666,
+    "longitude": 21.454396666666664,
+    "speed_knots": 0,
+    "observed_at": "2026-11-25T08:54:55.496Z",
+    "status": "live",
+    "name": "GREETJE"
+   },
+   "km_apart": 0.0,
+   "quay_age_min": 11.9,
+   "minutes_between": 9.0,
+   "sog_diff": 0.0,
+   "name_match": true
+  },
+  {
+   "mmsi": 230108490,
+   "name": "MERILUOTO",
+   "ship_type": 60,
+   "truth": {
+    "lat": 60.432525,
+    "lon": 22.218918,
+    "sog": 0.0,
+    "at": 1795597564301
+   },
+   "quay_status": 200,
+   "quay": {
+    "latitude": 60.43253,
+    "longitude": 22.218916666666665,
+    "speed_knots": 0,
+    "observed_at": "2026-11-25T08:57:03.594Z",
+    "status": "live",
+    "name": "MERILUOTO"
+   },
+   "km_apart": 0.001,
+   "quay_age_min": 9.8,
+   "minutes_between": 9.0,
+   "sog_diff": 0.0,
+   "name_match": true
+  },
+  {
+   "mmsi": 538010578,
+   "name": "HENDA",
+   "ship_type": 80,
+   "truth": {
+    "lat": 60.61832,
+    "lon": 28.560383,
+    "sog": 0.0,
+    "at": 1795597556567
+   },
+   "quay_status": 404
+  },
+  {
+   "mmsi": 245169000,
+   "name": "PLATAANBORG",
+   "ship_type": 70,
+   "truth": {
+    "lat": 60.685312,
+    "lon": 20.975577,
+    "sog": 0.6,
+    "at": 1795597407103
+   },
+   "quay_status": 200,
+   "quay": {
+    "latitude": 61.60030666666667,
+    "longitude": 21.475939999999998,
+    "speed_knots": 6.8,
+    "observed_at": "2026-11-24T19:10:49.868Z",
+    "status": "stale",
+    "name": "PLATAANBORG"
+   },
+   "km_apart": 105.226,
+   "quay_age_min": 836.0,
+   "minutes_between": 832.6,
+   "sog_diff": 6.2,
+   "name_match": true
+  },
+  {
+   "mmsi": 210681000,
+   "name": "JAMTLAND",
+   "ship_type": 70,
+   "truth": {
+    "lat": 59.574735,
+    "lon": 26.493352,
+    "sog": 0.0,
+    "at": 1795597506953
+   },
+   "quay_status": 200,
+   "quay": {
+    "latitude": 59.736958333333334,
+    "longitude": 25.751433333333335,
+    "speed_knots": 8.1,
+    "observed_at": "2026-11-24T12:35:58.168Z",
+    "status": "stale",
+    "name": "JAMTLAND"
+   },
+   "km_apart": 45.413,
+   "quay_age_min": 1230.8,
+   "minutes_between": 1229.1,
+   "sog_diff": 8.1,
+   "name_match": true
+  },
+  {
+   "mmsi": 352002064,
+   "name": "NORSE ALTAMIRA",
+   "ship_type": 70,
+   "truth": {
+    "lat": 63.587907,
+    "lon": 20.46038,
+    "sog": 3.5,
+    "at": 1795597563654
+   },
+   "quay_status": 200,
+   "quay": {
+    "latitude": 63.584666666666664,
+    "longitude": 20.466185,
+    "speed_knots": 3.6,
+    "observed_at": "2026-11-25T09:01:53.665Z",
+    "status": "live",
+    "name": "NORSE ALTAMIRA"
+   },
+   "km_apart": 0.461,
+   "quay_age_min": 4.9,
+   "minutes_between": 4.2,
+   "sog_diff": 0.1,
+   "name_match": true
+  },
+  {
+   "mmsi": 230234000,
+   "name": "TELEPAATTI",
+   "ship_type": 70,
+   "truth": {
+    "lat": 60.432228,
+    "lon": 22.216722,
+    "sog": 0.0,
+    "at": 1795597535578
+   },
+   "quay_status": 200,
+   "quay": {
+    "latitude": 60.432228333333335,
+    "longitude": 22.21672166666667,
+    "speed_knots": 0,
+    "observed_at": "2026-11-25T09:05:35.583Z",
+    "status": "live",
+    "name": "TELEPAATTI"
+   },
+   "km_apart": 0.0,
+   "quay_age_min": 1.2,
+   "minutes_between": 0.0,
+   "sog_diff": 0.0,
+   "name_match": true
+  },
+  {
+   "mmsi": 230158730,
+   "name": "RPP 508",
+   "ship_type": 51,
+   "truth": {
+    "lat": 64.224868,
+    "lon": 23.707682,
+    "sog": 0.0,
+    "at": 1795597560265
+   },
+   "quay_status": 404
+  },
+  {
+   "mmsi": 277569000,
+   "name": "SIRENA SEAWAYS",
+   "ship_type": 60,
+   "truth": {
+    "lat": 59.722533,
+    "lon": 19.069452,
+    "sog": 0.0,
+    "at": 1795597446010
+   },
+   "quay_status": 200,
+   "quay": {
+    "latitude": 59.72255833333334,
+    "longitude": 19.06947166666667,
+    "speed_knots": 0,
+    "observed_at": "2026-11-25T08:28:13.994Z",
+    "status": "live",
+    "name": "SIRENA SEAWAYS"
+   },
+   "km_apart": 0.003,
+   "quay_age_min": 38.6,
+   "minutes_between": 35.9,
+   "sog_diff": 0.0,
+   "name_match": true
+  },
+  {
+   "mmsi": 205553000,
+   "name": "EXEMPLAR",
+   "ship_type": 80,
+   "truth": {
+    "lat": 60.014595,
+    "lon": 23.918973,
+    "sog": 0.0,
+    "at": 1795597470805
+   },
+   "quay_status": 404
+  },
+  {
+   "mmsi": 230942840,
+   "name": "OTAVA",
+   "ship_type": 60,
+   "truth": {
+    "lat": 60.460302,
+    "lon": 26.963815,
+    "sog": 0.0,
+    "at": 1795597527746
+   },
+   "quay_status": 404
+  },
+  {
+   "mmsi": 230725000,
+   "name": "POSEIDON",
+   "ship_type": 52,
+   "truth": {
+    "lat": 60.015022,
+    "lon": 23.915203,
+    "sog": 0.4,
+    "at": 1795597564917
+   },
+   "quay_status": 200,
+   "quay": {
+    "latitude": 60.00250833333334,
+    "longitude": 23.982918333333334,
+    "speed_knots": 2.7,
+    "observed_at": "2026-11-25T06:52:01.585Z",
+    "status": "live",
+    "name": "POSEIDON"
+   },
+   "km_apart": 4.013,
+   "quay_age_min": 134.8,
+   "minutes_between": 134.1,
+   "sog_diff": 2.3,
+   "name_match": true
+  },
+  {
+   "mmsi": 230044270,
+   "name": "PETE",
+   "ship_type": 33,
+   "truth": {
+    "lat": 64.220638,
+    "lon": 23.71808,
+    "sog": 0.0,
+    "at": 1795597556890
+   },
+   "quay_status": 404
+  },
+  {
+   "mmsi": 230174220,
+   "name": "PRINCESS CAROLINE",
+   "ship_type": 60,
+   "truth": {
+    "lat": 61.125955,
+    "lon": 21.472498,
+    "sog": 0.0,
+    "at": 1795597388460
+   },
+   "quay_status": 200,
+   "quay": {
+    "latitude": 61.12599,
+    "longitude": 21.47243166666667,
+    "speed_knots": 0,
+    "observed_at": "2026-11-25T07:54:11.761Z",
+    "status": "live",
+    "name": "PRINCESS CAROLINE"
+   },
+   "km_apart": 0.005,
+   "quay_age_min": 72.6,
+   "minutes_between": 69.0,
+   "sog_diff": 0.0,
+   "name_match": true
+  },
+  {
+   "mmsi": 230980380,
+   "name": "POLLUX",
+   "ship_type": 0,
+   "truth": {
+    "lat": 65.00523,
+    "lon": 25.42649,
+    "sog": 0.0,
+    "at": 1795597393361
+   },
+   "quay_status": 200,
+   "quay": {
+    "latitude": 65.00523,
+    "longitude": 25.426491666666667,
+    "speed_knots": 0.1,
+    "observed_at": "2026-11-25T09:00:13.912Z",
+    "status": "live",
+    "name": "POLLUX"
+   },
+   "km_apart": 0.0,
+   "quay_age_min": 6.6,
+   "minutes_between": 3.0,
+   "sog_diff": 0.1,
+   "name_match": true
+  },
+  {
+   "mmsi": 255805882,
+   "name": "BEATA",
+   "ship_type": 70,
+   "truth": {
+    "lat": 61.029537,
+    "lon": 18.724578,
+    "sog": 9.7,
+    "at": 1795597511629
+   },
+   "quay_status": 200,
+   "quay": {
+    "latitude": 60.563451666666666,
+    "longitude": 18.99565,
+    "speed_knots": 8.5,
+    "observed_at": "2026-11-25T05:46:42.920Z",
+    "status": "live",
+    "name": "BEATA"
+   },
+   "km_apart": 53.872,
+   "quay_age_min": 200.1,
+   "minutes_between": 198.5,
+   "sog_diff": 1.2,
+   "name_match": true
+  },
+  {
+   "mmsi": 275546000,
+   "name": "DREAMLAND",
+   "ship_type": 70,
+   "truth": {
+    "lat": 59.459353,
+    "lon": 24.708325,
+    "sog": 0.0,
+    "at": 1795597383977
+   },
+   "quay_status": 200,
+   "quay": {
+    "latitude": 59.45935333333333,
+    "longitude": 24.708325,
+    "speed_knots": 0,
+    "observed_at": "2026-11-25T09:03:03.950Z",
+    "status": "live",
+    "name": "DREAMLAND"
+   },
+   "km_apart": 0.0,
+   "quay_age_min": 3.8,
+   "minutes_between": 0.0,
+   "sog_diff": 0.0,
+   "name_match": true
+  },
+  {
+   "mmsi": 245197000,
+   "name": "LADY MATHILDE",
+   "ship_type": 70,
+   "truth": {
+    "lat": 62.670297,
+    "lon": 19.992803,
+    "sog": 12.2,
+    "at": 1795597556329
+   },
+   "quay_status": 200,
+   "quay": {
+    "latitude": 63.502493333333334,
+    "longitude": 20.670786666666668,
+    "speed_knots": 12,
+    "observed_at": "2026-11-25T04:39:46.576Z",
+    "status": "live",
+    "name": "LADY MATHILDE"
+   },
+   "km_apart": 98.626,
+   "quay_age_min": 267.0,
+   "minutes_between": 266.2,
+   "sog_diff": 0.2,
+   "name_match": true
+  },
+  {
+   "mmsi": 636020342,
+   "name": "KERASIA S",
+   "ship_type": 70,
+   "truth": {
+    "lat": 60.000977,
+    "lon": 28.493237,
+    "sog": 0.0,
+    "at": 1795597486971
+   },
+   "quay_status": 200,
+   "quay": {
+    "latitude": 59.880916666666664,
+    "longitude": 30.18561833333333,
+    "speed_knots": 0.1,
+    "observed_at": "2026-11-24T06:55:51.780Z",
+    "status": "stale",
+    "name": "KERASIA S"
+   },
+   "km_apart": 95.198,
+   "quay_age_min": 1571.0,
+   "minutes_between": 1568.9,
+   "sog_diff": 0.1,
+   "name_match": true
+  },
+  {
+   "mmsi": 230723000,
+   "name": "NORDIS",
+   "ship_type": 70,
+   "truth": {
+    "lat": 63.008853,
+    "lon": 20.206608,
+    "sog": 11.3,
+    "at": 1795597565525
+   },
+   "quay_status": 200,
+   "quay": {
+    "latitude": 63.38330833333334,
+    "longitude": 20.512336666666666,
+    "speed_knots": 10.7,
+    "observed_at": "2026-11-25T06:55:54.769Z",
+    "status": "live",
+    "name": "NORDIS"
+   },
+   "km_apart": 44.37,
+   "quay_age_min": 130.9,
+   "minutes_between": 130.2,
+   "sog_diff": 0.6,
+   "name_match": true
+  },
+  {
+   "mmsi": 209325000,
+   "name": "RIX RIVER",
+   "ship_type": 70,
+   "truth": {
+    "lat": 59.461972,
+    "lon": 24.712888,
+    "sog": 0.0,
+    "at": 1795597396865
+   },
+   "quay_status": 200,
+   "quay": {
+    "latitude": 59.461999999999996,
+    "longitude": 24.712861666666665,
+    "speed_knots": 0,
+    "observed_at": "2026-11-25T08:42:17.683Z",
+    "status": "live",
+    "name": "RIX RIVER"
+   },
+   "km_apart": 0.003,
+   "quay_age_min": 24.5,
+   "minutes_between": 21.0,
+   "sog_diff": 0.0,
+   "name_match": true
+  },
+  {
+   "mmsi": 613271814,
+   "name": "RHEIN",
+   "ship_type": 80,
+   "truth": {
+    "lat": 59.827677,
+    "lon": 26.019168,
+    "sog": 0.2,
+    "at": 1795597423914
+   },
+   "quay_status": 200,
+   "quay": {
+    "latitude": 59.82752,
+    "longitude": 26.019325,
+    "speed_knots": 0.2,
+    "observed_at": "2026-11-25T09:06:43.880Z",
+    "status": "live",
+    "name": "RHEIN"
+   },
+   "km_apart": 0.02,
+   "quay_age_min": 0.1,
+   "minutes_between": 3.0,
+   "sog_diff": 0.0,
+   "name_match": true
+  },
+  {
+   "mmsi": 265781580,
+   "name": "BOTNICA",
+   "ship_type": 90,
+   "truth": {
+    "lat": 63.699418,
+    "lon": 22.692455,
+    "sog": 0.0,
+    "at": 1795597456691
+   },
+   "quay_status": 404
+  },
+  {
+   "mmsi": 273349470,
+   "name": "YANTARNY",
+   "ship_type": 70,
+   "truth": {
+    "lat": 59.718575,
+    "lon": 23.889227,
+    "sog": 10.9,
+    "at": 1795597563079
+   },
+   "quay_status": 200,
+   "quay": {
+    "latitude": 59.72667666666667,
+    "longitude": 23.947951666666665,
+    "speed_knots": 10.8,
+    "observed_at": "2026-11-25T08:55:52.808Z",
+    "status": "live",
+    "name": "YANTARNY"
+   },
+   "km_apart": 3.413,
+   "quay_age_min": 10.9,
+   "minutes_between": 10.2,
+   "sog_diff": 0.1,
+   "name_match": true
+  },
+  {
+   "mmsi": 246535000,
+   "name": "NEUSEBORG",
+   "ship_type": 70,
+   "truth": {
+    "lat": 61.126952,
+    "lon": 21.428572,
+    "sog": 0.0,
+    "at": 1795597444891
+   },
+   "quay_status": 200,
+   "quay": {
+    "latitude": 61.12695166666666,
+    "longitude": 21.428571666666667,
+    "speed_knots": 0,
+    "observed_at": "2026-11-25T09:04:04.955Z",
+    "status": "live",
+    "name": "NEUSEBORG"
+   },
+   "km_apart": 0.0,
+   "quay_age_min": 2.7,
+   "minutes_between": 0.0,
+   "sog_diff": 0.0,
+   "name_match": true
+  },
+  {
+   "mmsi": 273278950,
+   "name": "PREMIER",
+   "ship_type": 80,
+   "truth": {
+    "lat": 59.910052,
+    "lon": 28.662453,
+    "sog": 0.1,
+    "at": 1795597125835
+   },
+   "quay_status": 404
+  },
+  {
+   "mmsi": 230107940,
+   "name": "FINEXPRESS",
+   "ship_type": 70,
+   "truth": {
+    "lat": 60.174605,
+    "lon": 21.556428,
+    "sog": 0.0,
+    "at": 1795597562949
+   },
+   "quay_status": 200,
+   "quay": {
+    "latitude": 60.22773666666667,
+    "longitude": 21.520665,
+    "speed_knots": 20.9,
+    "observed_at": "2026-11-25T05:56:12.968Z",
+    "status": "live",
+    "name": "FINEXPRESS"
+   },
+   "km_apart": 6.23,
+   "quay_age_min": 190.6,
+   "minutes_between": 189.8,
+   "sog_diff": 20.9,
+   "name_match": true
+  },
+  {
+   "mmsi": 231930000,
+   "name": "HAV FLES",
+   "ship_type": 70,
+   "truth": {
+    "lat": 61.13142,
+    "lon": 21.431462,
+    "sog": 0.0,
+    "at": 1795597527382
+   },
+   "quay_status": 200,
+   "quay": {
+    "latitude": 61.131420000000006,
+    "longitude": 21.431461666666667,
+    "speed_knots": 0,
+    "observed_at": "2026-11-25T09:05:27.774Z",
+    "status": "live",
+    "name": "HAV FLES"
+   },
+   "km_apart": 0.0,
+   "quay_age_min": 1.4,
+   "minutes_between": 0.0,
+   "sog_diff": 0.0,
+   "name_match": true
+  },
+  {
+   "mmsi": 230717000,
+   "name": "SOFIA",
+   "ship_type": 70,
+   "truth": {
+    "lat": 65.752608,
+    "lon": 24.157712,
+    "sog": 0.0,
+    "at": 1795597423619
+   },
+   "quay_status": 404
+  },
+  {
+   "mmsi": 273343170,
+   "name": "FESCO NAVARIN",
+   "ship_type": 70,
+   "truth": {
+    "lat": 60.094837,
+    "lon": 28.305935,
+    "sog": 11.2,
+    "at": 1795597560307
+   },
+   "quay_status": 200,
+   "quay": {
+    "latitude": 59.87982,
+    "longitude": 25.89798,
+    "speed_knots": 9.8,
+    "observed_at": "2026-11-25T01:28:39.529Z",
+    "status": "stale",
+    "name": "FESCO NAVARIN"
+   },
+   "km_apart": 136.037,
+   "quay_age_min": 458.2,
+   "minutes_between": 457.4,
+   "sog_diff": 1.4,
+   "name_match": true
+  },
+  {
+   "mmsi": 230068170,
+   "name": "SISU",
+   "ship_type": 52,
+   "truth": {
+    "lat": 60.476143,
+    "lon": 26.94529,
+    "sog": 3.8,
+    "at": 1795597563122
+   },
+   "quay_status": 404
+  },
+  {
+   "mmsi": 244810209,
+   "name": "TRINITYBORG",
+   "ship_type": 70,
+   "truth": {
+    "lat": 61.126563,
+    "lon": 21.43283,
+    "sog": 0.0,
+    "at": 1795597522166
+   },
+   "quay_status": 200,
+   "quay": {
+    "latitude": 61.12656166666667,
+    "longitude": 21.432828333333337,
+    "speed_knots": 0,
+    "observed_at": "2026-11-25T09:02:21.875Z",
+    "status": "live",
+    "name": "TRINITYBORG"
+   },
+   "km_apart": 0.0,
+   "quay_age_min": 4.5,
+   "minutes_between": 3.0,
+   "sog_diff": 0.0,
+   "name_match": true
+  },
+  {
+   "mmsi": 210028000,
+   "name": "CONTSHIPS BOREALIS",
+   "ship_type": 70,
+   "truth": {
+    "lat": 59.771713,
+    "lon": 24.723973,
+    "sog": 10.0,
+    "at": 1795597559038
+   },
+   "quay_status": 200,
+   "quay": {
+    "latitude": 59.76607166666667,
+    "longitude": 24.68234,
+    "speed_knots": 9.7,
+    "observed_at": "2026-11-25T08:57:59.927Z",
+    "status": "live",
+    "name": "CONTSHIPS BOREALIS"
+   },
+   "km_apart": 2.414,
+   "quay_age_min": 8.8,
+   "minutes_between": 8.0,
+   "sog_diff": 0.3,
+   "name_match": true
+  },
+  {
+   "mmsi": 230914000,
+   "name": "VIGGEN",
+   "ship_type": 60,
+   "truth": {
+    "lat": 60.118052,
+    "lon": 20.296662,
+    "sog": 0.0,
+    "at": 1795597565423
+   },
+   "quay_status": 200,
+   "quay": {
+    "latitude": 60.033339999999995,
+    "longitude": 21.13585833333333,
+    "speed_knots": 11.9,
+    "observed_at": "2026-11-24T08:59:14.516Z",
+    "status": "stale",
+    "name": "VIGGEN"
+   },
+   "km_apart": 47.494,
+   "quay_age_min": 1447.6,
+   "minutes_between": 1446.9,
+   "sog_diff": 11.9,
+   "name_match": true
+  },
+  {
+   "mmsi": 230983050,
+   "name": "SPARK",
+   "ship_type": 33,
+   "truth": {
+    "lat": 59.824925,
+    "lon": 22.94737,
+    "sog": 0.0,
+    "at": 1795597563554
+   },
+   "quay_status": 200,
+   "quay": {
+    "latitude": 59.82493,
+    "longitude": 22.947366666666667,
+    "speed_knots": 0,
+    "observed_at": "2026-11-25T09:03:43.613Z",
+    "status": "live",
+    "name": "SPARK"
+   },
+   "km_apart": 0.001,
+   "quay_age_min": 3.1,
+   "minutes_between": 2.3,
+   "sog_diff": 0.0,
+   "name_match": true
+  },
+  {
+   "mmsi": 230093090,
+   "name": "PILOT L243",
+   "ship_type": 50,
+   "truth": {
+    "lat": 60.275407,
+    "lon": 26.445522,
+    "sog": 0.0,
+    "at": 1795597559303
+   },
+   "quay_status": 404
+  },
+  {
+   "mmsi": 212838000,
+   "name": "VAESTERBOTTEN",
+   "ship_type": 70,
+   "truth": {
+    "lat": 59.650488,
+    "lon": 20.008308,
+    "sog": 10.2,
+    "at": 1795597565721
+   },
+   "quay_status": 404
+  }
+ ]
+}

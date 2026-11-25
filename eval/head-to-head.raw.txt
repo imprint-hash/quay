@@ -1,0 +1,64 @@
+
+## 8818818 352002064 200 6785ms {"miner":"Quay","result":{"vessel":"352002064","speed_knots":3.6,"latitude":63.584666666666664,"longitude":20.466185,"course_deg":321.3,"observed_at":"2026-11-25T09:01:53.665Z"}}
+
+## 7603 352002064 200 8001ms {"miner":"VesselWire Vessel Telemetry Verify","result":{"vessel":"352002064","speed_knots":3.4,"latitude":63.590098,"longitude":20.456598,"course_deg":317,"observed_at":"2026-11-25T09:08:53.607Z"}}
+
+## 93003 352002064 200 6620ms {"miner":"Digitraffic AIS by MMSI","result":{"vessel":"352002064","speed_knots":3.4,"latitude":20.456598,"longitude":63.590098,"course_deg":317.3,"observed_at":"2026-11-25T09:08:54Z"}}
+
+## 170068 352002064 200 5576ms {"miner":"Fintraffic Digitraffic AIS","result":{"vessel":"352002064","speed_knots":3.4,"latitude":null,"longitude":null,"course_deg":317.3,"observed_at":"1795597733607"}}
+
+## 9002 352002064 200 7119ms {"miner":"TxLens","result":{"vessel":"352002064","speed_knots":3.4,"latitude":63.590098,"longitude":20.456598,"course_deg":317.3,"observed_at":"2026-11-25 09:08 UTC"}}
+
+## 20260828 352002064 200 6941ms {"miner":"PREFLIGHT Infrastructure Signals","result":{"vessel":"352002064","speed_knots":3.4,"latitude":63.590098,"longitude":20.456598,"course_deg":317.3,"observed_at":"2026-11-25T09:08:53.607Z"}}
+
+## 302 352002064 200 10711ms {"miner":"ChainSight — Universal Intelligence & Data Oracle","result":{"vessel":"352002064","speed_knots":3.4,"latitude":63.590098,"longitude":20.456598,"course_deg":317,"observed_at":"2026-11-25T09:08:53.607Z"}}
+
+## 93006 352002064 503 3807ms {"err":"no_compatible_miner"}
+
+## 8818818 273349470 200 5830ms {"miner":"Quay","result":{"vessel":"273349470","speed_knots":10.8,"latitude":59.716613333333335,"longitude":23.874865,"course_deg":254.9,"observed_at":"2026-11-25T09:08:31.534Z"}}
+
+## 7603 273349470 200 7638ms {"miner":"VesselWire Vessel Telemetry Verify","result":{"vessel":"273349470","speed_knots":10.9,"latitude":59.715532,"longitude":23.867178,"course_deg":254.2,"observed_at":"2026-11-25T09:09:51.540Z"}}
+
+## 93003 273349470 200 6555ms {"miner":"Digitraffic AIS by MMSI","result":{"vessel":"273349470","speed_knots":10.9,"latitude":23.867178,"longitude":59.715532,"course_deg":254.2,"observed_at":"2026-11-25T09:09:52Z"}}
+
+## 170068 273349470 200 5893ms {"miner":"Fintraffic Digitraffic AIS","result":{"vessel":"273349470","speed_knots":10.9,"latitude":null,"longitude":null,"course_deg":254.2,"observed_at":"1795597791540"}}
+
+## 9002 273349470 200 6947ms {"miner":"TxLens","result":{"vessel":"273349470","speed_knots":10.9,"latitude":59.715532,"longitude":23.867178,"course_deg":254.2,"observed_at":"2026-11-25 09:09 UTC"}}
+
+## 20260828 273349470 200 5998ms {"miner":"PREFLIGHT Infrastructure Signals","result":{"vessel":"273349470","speed_knots":10.9,"latitude":59.715532,"longitude":23.867178,"course_deg":254.2,"observed_at":"2026-11-25T09:09:51.540Z"}}
+
+## 302 273349470 200 8692ms {"miner":"ChainSight — Universal Intelligence & Data Oracle","result":{"vessel":"273349470","speed_knots":10.9,"latitude":59.715532,"longitude":23.867178,"course_deg":254.2,"observed_at":"2026-11-25T09:09:51.540Z"}}
+
+## 93006 273349470 503 3698ms {"err":"no_compatible_miner"}
+
+## 8818818 230035440 200 5818ms {"miner":"Quay","result":{"vessel":"230035440","speed_knots":0.1,"latitude":63.83839666666667,"longitude":23.03259166666667,"course_deg":128.1,"observed_at":"2026-11-25T09:01:44.215Z"}}
+
+## 7603 230035440 200 7563ms {"miner":"VesselWire Vessel Telemetry Verify","result":{"vessel":"230035440","speed_knots":0.1,"latitude":63.838402,"longitude":23.032612,"course_deg":128,"observed_at":"2026-11-25T09:10:43.817Z"}}
+
+## 93003 230035440 200 5959ms {"miner":"Digitraffic AIS by MMSI","result":{"vessel":"230035440","speed_knots":0.1,"latitude":23.032612,"longitude":23.032612,"course_deg":128.1,"observed_at":"2026-11-25T09:10:44Z"}}
+
+## 170068 230035440 200 5008ms {"miner":"Fintraffic Digitraffic AIS","result":{"vessel":"230035440","speed_knots":0.1,"latitude":null,"longitude":null,"course_deg":128.1,"observed_at":"1795597843817"}}
+
+## 9002 230035440 200 7124ms {"miner":"TxLens","result":{"vessel":"230035440","speed_knots":0.1,"latitude":63.838402,"longitude":23.032612,"course_deg":128.1,"observed_at":"2026-11-25 09:10 UTC"}}
+
+## 20260828 230035440 200 6564ms {"miner":"PREFLIGHT Infrastructure Signals","result":{"vessel":"230035440","speed_knots":0.1,"latitude":63.838402,"longitude":23.032612,"course_deg":128.1,"observed_at":"2026-11-25T09:10:43.817Z"}}
+
+## 302 230035440 200 13980ms {"miner":"ChainSight — Universal Intelligence & Data Oracle","result":{"vessel":"230035440","speed_knots":0.1,"latitude":63.838402,"longitude":23.032612,"course_deg":128,"observed_at":"2026-11-25T09:10:43.817Z"}}
+
+## 93006 230035440 -1 123969ms Error: Command failed: curl -s -m 120 -i -X POST -H Content-Type: application/json -H X-PAYMENT: <redacted>
+
+## 8818818 219278000 -1 123283ms Error: Command failed: curl -s -m 120 -i -X POST -H Content-Type: application/json -H X-PAYMENT: <redacted>
+
+## 7603 219278000 -1 123098ms Error: Command failed: curl -s -m 120 -i -X POST -H Content-Type: application/json -H X-PAYMENT: <redacted>
+
+## 93003 219278000 -1 125079ms Error: Command failed: curl -s -m 120 -i -X POST -H Content-Type: application/json -H X-PAYMENT: <redacted>
+
+## 170068 219278000 -1 123164ms Error: Command failed: curl -s -m 120 -i -X POST -H Content-Type: application/json -H X-PAYMENT: <redacted>
+
+## 9002 219278000 -1 123107ms Error: Command failed: curl -s -m 120 -i -X POST -H Content-Type: application/json -H X-PAYMENT: <redacted>
+
+## 20260828 219278000 -1 123108ms Error: Command failed: curl -s -m 120 -i -X POST -H Content-Type: application/json -H X-PAYMENT: <redacted>
+
+## 302 219278000 -1 126141ms Error: Command failed: curl -s -m 120 -i -X POST -H Content-Type: application/json -H X-PAYMENT: <redacted>
+
+## 93006 219278000 503 4332ms {"err":"no_compatible_miner"}

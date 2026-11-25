@@ -1,0 +1,437 @@
+[
+ {
+  "miner_id": "8818818",
+  "vessel": "352002064",
+  "http": 200,
+  "ms": 6785,
+  "miner_name": "Quay",
+  "result": {
+   "vessel": "352002064",
+   "speed_knots": 3.6,
+   "latitude": 63.584666666666664,
+   "longitude": 20.466185,
+   "course_deg": 321.3,
+   "observed_at": "2026-11-25T09:01:53.665Z"
+  },
+  "error": null
+ },
+ {
+  "miner_id": "7603",
+  "vessel": "352002064",
+  "http": 200,
+  "ms": 8001,
+  "miner_name": "VesselWire Vessel Telemetry Verify",
+  "result": {
+   "vessel": "352002064",
+   "speed_knots": 3.4,
+   "latitude": 63.590098,
+   "longitude": 20.456598,
+   "course_deg": 317,
+   "observed_at": "2026-11-25T09:08:53.607Z"
+  },
+  "error": null
+ },
+ {
+  "miner_id": "93003",
+  "vessel": "352002064",
+  "http": 200,
+  "ms": 6620,
+  "miner_name": "Digitraffic AIS by MMSI",
+  "result": {
+   "vessel": "352002064",
+   "speed_knots": 3.4,
+   "latitude": 20.456598,
+   "longitude": 63.590098,
+   "course_deg": 317.3,
+   "observed_at": "2026-11-25T09:08:54Z"
+  },
+  "error": null
+ },
+ {
+  "miner_id": "170068",
+  "vessel": "352002064",
+  "http": 200,
+  "ms": 5576,
+  "miner_name": "Fintraffic Digitraffic AIS",
+  "result": {
+   "vessel": "352002064",
+   "speed_knots": 3.4,
+   "latitude": null,
+   "longitude": null,
+   "course_deg": 317.3,
+   "observed_at": "1795597733607"
+  },
+  "error": null
+ },
+ {
+  "miner_id": "9002",
+  "vessel": "352002064",
+  "http": 200,
+  "ms": 7119,
+  "miner_name": "TxLens",
+  "result": {
+   "vessel": "352002064",
+   "speed_knots": 3.4,
+   "latitude": 63.590098,
+   "longitude": 20.456598,
+   "course_deg": 317.3,
+   "observed_at": "2026-11-25 09:08 UTC"
+  },
+  "error": null
+ },
+ {
+  "miner_id": "20260828",
+  "vessel": "352002064",
+  "http": 200,
+  "ms": 6941,
+  "miner_name": "PREFLIGHT Infrastructure Signals",
+  "result": {
+   "vessel": "352002064",
+   "speed_knots": 3.4,
+   "latitude": 63.590098,
+   "longitude": 20.456598,
+   "course_deg": 317.3,
+   "observed_at": "2026-11-25T09:08:53.607Z"
+  },
+  "error": null
+ },
+ {
+  "miner_id": "302",
+  "vessel": "352002064",
+  "http": 200,
+  "ms": 10711,
+  "miner_name": "ChainSight \u2014 Universal Intelligence & Data Oracle",
+  "result": {
+   "vessel": "352002064",
+   "speed_knots": 3.4,
+   "latitude": 63.590098,
+   "longitude": 20.456598,
+   "course_deg": 317,
+   "observed_at": "2026-11-25T09:08:53.607Z"
+  },
+  "error": null
+ },
+ {
+  "miner_id": "93006",
+  "vessel": "352002064",
+  "http": 503,
+  "ms": 3807,
+  "miner_name": null,
+  "result": null,
+  "error": "no_compatible_miner"
+ },
+ {
+  "miner_id": "8818818",
+  "vessel": "273349470",
+  "http": 200,
+  "ms": 5830,
+  "miner_name": "Quay",
+  "result": {
+   "vessel": "273349470",
+   "speed_knots": 10.8,
+   "latitude": 59.716613333333335,
+   "longitude": 23.874865,
+   "course_deg": 254.9,
+   "observed_at": "2026-11-25T09:08:31.534Z"
+  },
+  "error": null
+ },
+ {
+  "miner_id": "7603",
+  "vessel": "273349470",
+  "http": 200,
+  "ms": 7638,
+  "miner_name": "VesselWire Vessel Telemetry Verify",
+  "result": {
+   "vessel": "273349470",
+   "speed_knots": 10.9,
+   "latitude": 59.715532,
+   "longitude": 23.867178,
+   "course_deg": 254.2,
+   "observed_at": "2026-11-25T09:09:51.540Z"
+  },
+  "error": null
+ },
+ {
+  "miner_id": "93003",
+  "vessel": "273349470",
+  "http": 200,
+  "ms": 6555,
+  "miner_name": "Digitraffic AIS by MMSI",
+  "result": {
+   "vessel": "273349470",
+   "speed_knots": 10.9,
+   "latitude": 23.867178,
+   "longitude": 59.715532,
+   "course_deg": 254.2,
+   "observed_at": "2026-11-25T09:09:52Z"
+  },
+  "error": null
+ },
+ {
+  "miner_id": "170068",
+  "vessel": "273349470",
+  "http": 200,
+  "ms": 5893,
+  "miner_name": "Fintraffic Digitraffic AIS",
+  "result": {
+   "vessel": "273349470",
+   "speed_knots": 10.9,
+   "latitude": null,
+   "longitude": null,
+   "course_deg": 254.2,
+   "observed_at": "1795597791540"
+  },
+  "error": null
+ },
+ {
+  "miner_id": "9002",
+  "vessel": "273349470",
+  "http": 200,
+  "ms": 6947,
+  "miner_name": "TxLens",
+  "result": {
+   "vessel": "273349470",
+   "speed_knots": 10.9,
+   "latitude": 59.715532,
+   "longitude": 23.867178,
+   "course_deg": 254.2,
+   "observed_at": "2026-11-25 09:09 UTC"
+  },
+  "error": null
+ },
+ {
+  "miner_id": "20260828",
+  "vessel": "273349470",
+  "http": 200,
+  "ms": 5998,
+  "miner_name": "PREFLIGHT Infrastructure Signals",
+  "result": {
+   "vessel": "273349470",
+   "speed_knots": 10.9,
+   "latitude": 59.715532,
+   "longitude": 23.867178,
+   "course_deg": 254.2,
+   "observed_at": "2026-11-25T09:09:51.540Z"
+  },
+  "error": null
+ },
+ {
+  "miner_id": "302",
+  "vessel": "273349470",
+  "http": 200,
+  "ms": 8692,
+  "miner_name": "ChainSight \u2014 Universal Intelligence & Data Oracle",
+  "result": {
+   "vessel": "273349470",
+   "speed_knots": 10.9,
+   "latitude": 59.715532,
+   "longitude": 23.867178,
+   "course_deg": 254.2,
+   "observed_at": "2026-11-25T09:09:51.540Z"
+  },
+  "error": null
+ },
+ {
+  "miner_id": "93006",
+  "vessel": "273349470",
+  "http": 503,
+  "ms": 3698,
+  "miner_name": null,
+  "result": null,
+  "error": "no_compatible_miner"
+ },
+ {
+  "miner_id": "8818818",
+  "vessel": "230035440",
+  "http": 200,
+  "ms": 5818,
+  "miner_name": "Quay",
+  "result": {
+   "vessel": "230035440",
+   "speed_knots": 0.1,
+   "latitude": 63.83839666666667,
+   "longitude": 23.03259166666667,
+   "course_deg": 128.1,
+   "observed_at": "2026-11-25T09:01:44.215Z"
+  },
+  "error": null
+ },
+ {
+  "miner_id": "7603",
+  "vessel": "230035440",
+  "http": 200,
+  "ms": 7563,
+  "miner_name": "VesselWire Vessel Telemetry Verify",
+  "result": {
+   "vessel": "230035440",
+   "speed_knots": 0.1,
+   "latitude": 63.838402,
+   "longitude": 23.032612,
+   "course_deg": 128,
+   "observed_at": "2026-11-25T09:10:43.817Z"
+  },
+  "error": null
+ },
+ {
+  "miner_id": "93003",
+  "vessel": "230035440",
+  "http": 200,
+  "ms": 5959,
+  "miner_name": "Digitraffic AIS by MMSI",
+  "result": {
+   "vessel": "230035440",
+   "speed_knots": 0.1,
+   "latitude": 23.032612,
+   "longitude": 23.032612,
+   "course_deg": 128.1,
+   "observed_at": "2026-11-25T09:10:44Z"
+  },
+  "error": null
+ },
+ {
+  "miner_id": "170068",
+  "vessel": "230035440",
+  "http": 200,
+  "ms": 5008,
+  "miner_name": "Fintraffic Digitraffic AIS",
+  "result": {
+   "vessel": "230035440",
+   "speed_knots": 0.1,
+   "latitude": null,
+   "longitude": null,
+   "course_deg": 128.1,
+   "observed_at": "1795597843817"
+  },
+  "error": null
+ },
+ {
+  "miner_id": "9002",
+  "vessel": "230035440",
+  "http": 200,
+  "ms": 7124,
+  "miner_name": "TxLens",
+  "result": {
+   "vessel": "230035440",
+   "speed_knots": 0.1,
+   "latitude": 63.838402,
+   "longitude": 23.032612,
+   "course_deg": 128.1,
+   "observed_at": "2026-11-25 09:10 UTC"
+  },
+  "error": null
+ },
+ {
+  "miner_id": "20260828",
+  "vessel": "230035440",
+  "http": 200,
+  "ms": 6564,
+  "miner_name": "PREFLIGHT Infrastructure Signals",
+  "result": {
+   "vessel": "230035440",
+   "speed_knots": 0.1,
+   "latitude": 63.838402,
+   "longitude": 23.032612,
+   "course_deg": 128.1,
+   "observed_at": "2026-11-25T09:10:43.817Z"
+  },
+  "error": null
+ },
+ {
+  "miner_id": "302",
+  "vessel": "230035440",
+  "http": 200,
+  "ms": 13980,
+  "miner_name": "ChainSight \u2014 Universal Intelligence & Data Oracle",
+  "result": {
+   "vessel": "230035440",
+   "speed_knots": 0.1,
+   "latitude": 63.838402,
+   "longitude": 23.032612,
+   "course_deg": 128,
+   "observed_at": "2026-11-25T09:10:43.817Z"
+  },
+  "error": null
+ },
+ {
+  "miner_id": "93006",
+  "vessel": "230035440",
+  "http": -1,
+  "ms": 123969,
+  "miner_name": null,
+  "result": null,
+  "error": "devnode timeout (no answer in 120 s)"
+ },
+ {
+  "miner_id": "8818818",
+  "vessel": "219278000",
+  "http": -1,
+  "ms": 123283,
+  "miner_name": null,
+  "result": null,
+  "error": "devnode timeout (no answer in 120 s)"
+ },
+ {
+  "miner_id": "7603",
+  "vessel": "219278000",
+  "http": -1,
+  "ms": 123098,
+  "miner_name": null,
+  "result": null,
+  "error": "devnode timeout (no answer in 120 s)"
+ },
+ {
+  "miner_id": "93003",
+  "vessel": "219278000",
+  "http": -1,
+  "ms": 125079,
+  "miner_name": null,
+  "result": null,
+  "error": "devnode timeout (no answer in 120 s)"
+ },
+ {
+  "miner_id": "170068",
+  "vessel": "219278000",
+  "http": -1,
+  "ms": 123164,
+  "miner_name": null,
+  "result": null,
+  "error": "devnode timeout (no answer in 120 s)"
+ },
+ {
+  "miner_id": "9002",
+  "vessel": "219278000",
+  "http": -1,
+  "ms": 123107,
+  "miner_name": null,
+  "result": null,
+  "error": "devnode timeout (no answer in 120 s)"
+ },
+ {
+  "miner_id": "20260828",
+  "vessel": "219278000",
+  "http": -1,
+  "ms": 123108,
+  "miner_name": null,
+  "result": null,
+  "error": "devnode timeout (no answer in 120 s)"
+ },
+ {
+  "miner_id": "302",
+  "vessel": "219278000",
+  "http": -1,
+  "ms": 126141,
+  "miner_name": null,
+  "result": null,
+  "error": "devnode timeout (no answer in 120 s)"
+ },
+ {
+  "miner_id": "93006",
+  "vessel": "219278000",
+  "http": 503,
+  "ms": 4332,
+  "miner_name": null,
+  "result": null,
+  "error": "no_compatible_miner"
+ }
+]

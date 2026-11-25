@@ -1,0 +1,100 @@
+version: "1"
+kind: miner
+id: 8818818
+slug: quay-ais
+protocol: generic
+name: Quay
+description: >
+  Live vessel positions and port congestion from real-time AIS broadcasts, heard by terrestrial
+  receivers worldwide and kept current second by second. Answers where a named ship is right now
+  (by name, 9-digit MMSI or IMO) with the time it was last heard, and how many ships are waiting
+  at anchor outside 27 major ports. Never guesses: an unheard ship or a thinly covered port is
+  reported as not seen, not filled in.
+base_url: https://16-192-237-212.sslip.io
+
+rate_limit_per_sec: 10
+cache_ttl_sec: 30
+circuit_threshold: 5
+circuit_cooldown_seconds: 30
+
+docs:
+  website: https://16-192-237-212.sslip.io/health
+
+limitations:
+  - code: TERRESTRIAL_COVERAGE
+    message: Positions come from shore-based AIS receivers. Ships far offshore can go unheard; the answer then says vessel_not_seen rather than guessing.
+  - code: LAST_HEARD
+    message: Every position carries observed_at. Positions older than 6 hours are marked status stale.
+  - code: PORT_LIST
+    message: Port congestion covers 27 major ports (see /ports). Ports with too few ships heard return insufficient_coverage.
+
+endpoints:
+  - path: /vessel
+    external_path: /vessel
+    method: GET
+    description: >
+      VESSEL_TELEMETRY_VERIFY. Answers "where is the MSC GULSUN right now", "how fast is MMSI 219278000 going"
+      and "what is IMO 9839430 doing". Returns latitude, longitude, speed_knots, course_deg and observed_at,
+      plus mmsi, imo, name, nav_status, destination and the ship's reported ETA.
+    intents: [VESSEL_TELEMETRY_VERIFY_GENERAL]
+    params:
+      query:
+        required:
+          - name: vessel
+            type: string
+            intents: ["*"]
+            description: "Ship name (for example HULDA MAERSK), 9-digit MMSI (219278000) or IMO number (IMO 9839430)."
+  - path: /port
+    external_path: /port
+    method: GET
+    description: >
+      LIVE_PORT_CONGESTION. Answers "how congested is Rotterdam" and "how many ships are waiting at Singapore".
+      Returns vessels_waiting, wait_hours, congestion_level and as_of, plus vessels_in_area and the method used.
+    intents: [LIVE_PORT_CONGESTION_GENERAL]
+    params:
+      query:
+        required:
+          - name: port
+            type: string
+            intents: ["*"]
+            description: "Port name or UN/LOCODE, for example Rotterdam or NLRTM. Covered ports are listed at /ports."
+
+input_schema:
+  type: object
+  properties:
+    vessel:
+      type: string
+      description: Ship name, 9-digit MMSI or IMO number.
+    port:
+      type: string
+      description: Port name or UN/LOCODE.
+
+semantics:
+  signal_mapping:
+    label_field: vessel
+  supported_intents:
+    - VESSEL_TELEMETRY_VERIFY_GENERAL
+    - LIVE_PORT_CONGESTION_GENERAL
+
+intent_mapping:
+  VESSEL_TELEMETRY_VERIFY_GENERAL:
+    endpoint: /vessel
+    input:
+      vessel: { from: vessel, how: "Ship name, 9-digit MMSI or IMO number exactly as the user gave it." }
+    output:
+      vessel: { path: vessel }
+      speed_knots: { path: speed_knots }
+      latitude: { path: latitude }
+      longitude: { path: longitude }
+      course_deg: { path: course_deg }
+      observed_at: { path: observed_at }
+  LIVE_PORT_CONGESTION_GENERAL:
+    endpoint: /port
+    input:
+      port: { from: port, how: "Port name or UN/LOCODE, for example Rotterdam or NLRTM." }
+    output:
+      port: { path: port }
+      vessels_waiting: { path: vessels_waiting }
+      wait_hours: { path: wait_hours }
+      congestion_level: { path: congestion_level }
+      as_of: { path: as_of }
