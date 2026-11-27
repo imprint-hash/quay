@@ -73,6 +73,8 @@ Only seagoing cargo ships and tankers count: an early version counted tugs, pilo
 One Node.js process (`index.js`, ~260 lines):
 
 1. Subscribes to the [aisstream.io](https://aisstream.io) WebSocket for position, static and voyage reports worldwide, and keeps the latest state of every ship in memory, indexed by MMSI, IMO and name.
+   A second feed, [Fintraffic Digitraffic](https://www.digitraffic.fi/en/marine-traffic/) (official Finnish AIS open data), is polled every minute: it fills the volunteer stream's Baltic gaps (Kotka went from 0 cargo ships heard to 10).
+   Ports covered: 110 worldwide (`GET /ports`). Where no cargo ship is heard at all, Quay says so (`insufficient_coverage`) instead of guessing; with 1–2 heard it answers with a thin-coverage caveat.
 2. Saves a snapshot every 60 s (restarts keep everything), forgets ships not heard in 72 h, and reconnects the stream with a watchdog.
 3. Answers `/vessel` and `/port` over HTTPS (Caddy, Let's Encrypt) on an always-on AWS server, under pm2.
 

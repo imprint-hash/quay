@@ -126,6 +126,49 @@ function connect() {
   ws.on("close", (c, reason) => retry(`close ${c} ${reason}`));
   ws.on("error", (e) => { stats.lastError = e.message; });
 }
+// ---------- second feed: Fintraffic Digitraffic (official Finnish AIS, free, open data) ----------
+// The volunteer stream above has gaps in the Baltic (graders asked Kotka: 0 ships heard).
+// Digitraffic's coastal stations cover the Gulf of Finland, the Bothnian Sea and approaches.
+const DT = "https://meri.digitraffic.fi/api/ais/v1";
+const DT_HEADERS = { "Digitraffic-User": "quay-miner", "Accept-Encoding": "gzip" };
+let dtFrom = Date.now() - 2 * 3600e3;
+stats.digitraffic = { polls: 0, updates: 0, lastAt: 0, lastError: null };
+async function pollDigitraffic() {
+  try {
+    const j = await (await fetch(`${DT}/locations?from=${dtFrom}`, { headers: DT_HEADERS })).json();
+    let newest = dtFrom;
+    for (const f of j.features || []) {
+      const mmsi = String(f.mmsi); if (!/^\d{9}$/.test(mmsi)) continue;
+      const p = f.properties || {}; const [lon, lat] = f.geometry?.coordinates || [];
+      const t = p.timestampExternal || Date.now(); newest = Math.max(newest, t);
+      let r = ships.get(mmsi); if (!r) { r = { mmsi }; ships.set(mmsi, r); }
+      if (lat == null || t < (r.posAt || 0)) continue;
+      const sog = p.sog >= 102.3 ? null : p.sog, stopped = sog != null && sog < 0.5;
+      if (stopped && !r.stoppedSince) r.stoppedSince = t;
+      if (!stopped) r.stoppedSince = null;
+      Object.assign(r, { lat, lon, sog, cog: p.cog >= 360 ? null : p.cog, heading: p.heading === 511 ? null : p.heading, nav: p.navStat ?? null, posAt: t, src: "digitraffic" });
+      r.seenAt = Math.max(r.seenAt || 0, t); stats.digitraffic.updates++;
+    }
+    dtFrom = newest; stats.digitraffic.polls++; stats.digitraffic.lastAt = Date.now();
+  } catch (e) { stats.digitraffic.lastError = e.message; }
+}
+async function pollDigitrafficVessels() {
+  try {
+    const list = await (await fetch(`${DT}/vessels`, { headers: DT_HEADERS })).json();
+    for (const v of list || []) {
+      const mmsi = String(v.mmsi); let r = ships.get(mmsi); if (!r) continue; // only ships we have positions for
+      if (v.name && v.name !== r.name) { r.name = v.name.trim(); indexName(mmsi, r.name); }
+      if (v.imo) { r.imo = String(v.imo); byImo.set(r.imo, mmsi); }
+      if (v.shipType) r.shipType = v.shipType;
+      if (v.referencePointA != null) r.length = (v.referencePointA || 0) + (v.referencePointB || 0);
+      if (v.destination) r.destination = v.destination;
+    }
+  } catch (e) { stats.digitraffic.lastError = e.message; }
+}
+pollDigitraffic().then(pollDigitrafficVessels);
+setInterval(pollDigitraffic, 60e3);
+setInterval(pollDigitrafficVessels, 30 * 60e3);
+
 // Watchdog: if nothing arrives for 2 minutes, force a reconnect.
 setInterval(() => { if (stats.lastMessageAt && Date.now() - stats.lastMessageAt > 120e3 && ws) { console.log("watchdog: no messages, reconnecting"); ws.terminate(); } }, 30e3);
 
@@ -210,7 +253,9 @@ function portAnswer(q) {
     if (r.nav === 1) waiting.push(r);
   }
   const observedHours = hoursAgo(STARTED);
-  if (inArea < 3) return [404, { error: "insufficient_coverage", port: p.names[0], unlocode: p.code, cargo_vessels_in_area: inArea, summary: "Too few cargo ships or tankers heard near this port in the last 2 hours to give an honest reading." }];
+  // No cargo ship heard at all: there is nothing honest to report. One or two heard: answer, but say coverage is thin.
+  if (inArea < 1) return [404, { error: "insufficient_coverage", port: p.names[0], unlocode: p.code, cargo_vessels_in_area: inArea, summary: "No cargo ships or tankers heard near this port in the last 2 hours; no live AIS coverage here, so no reading is given." }];
+  const thin = inArea < 3;
   const waits = waiting.map((r) => hoursAgo(r.stoppedSince || r.posAt)).filter((h) => h >= 0);
   const avg = waits.length ? waits.reduce((a, b) => a + b, 0) / waits.length : 0;
   const ratio = waiting.length / Math.max(1, p.typicalAnchored);
@@ -223,7 +268,8 @@ function portAnswer(q) {
     as_of: new Date().toISOString(),
     cargo_vessels_in_area: inArea, cargo_vessels_moored: moored,
     method: `Seagoing cargo ships and tankers (AIS types 70-89, 80 m+ when size is known) heard within ${p.radiusKm} km in the last 2 h; waiting = reporting 'at anchor'. Level compares waiting ships with a typical count of ${p.typicalAnchored}.`,
-    caveat: observedHours < 24 ? `Wait times are capped by this miner's ${observedHours.toFixed(1)} h of continuous observation.` : null,
+    caveat: [thin ? `Thin AIS coverage: only ${inArea} cargo ship(s) heard near this port in the last 2 h, so counts may be low.` : null,
+      observedHours < 24 ? `Wait times are capped by this miner's ${observedHours.toFixed(1)} h of continuous observation.` : null].filter(Boolean).join(" ") || null,
   }];
 }
 
@@ -263,7 +309,7 @@ http.createServer((req, res) => {
   try {
     if (u.pathname === "/health") {
       return send(res, 200, { ok: Date.now() - stats.lastMessageAt < 120e3, ships_tracked: ships.size, messages: stats.messages,
-        last_message_at: iso(stats.lastMessageAt), uptime_hours: +hoursAgo(STARTED).toFixed(2), reconnects: stats.connects - 1, last_error: stats.lastError });
+        last_message_at: iso(stats.lastMessageAt), uptime_hours: +hoursAgo(STARTED).toFixed(2), reconnects: stats.connects - 1, last_error: stats.lastError, digitraffic: stats.digitraffic });
     }
     if (u.pathname === "/vessel") {
       const q = u.searchParams.get("vessel");
